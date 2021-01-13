@@ -17,7 +17,7 @@ Boolean connect = false;
 	
 try{
     Class.forName(driver);
-    conn=DriverManager.getConnection(url,"SYSTEM","1234"); //자신의 아이디와 비밀번호
+    conn=DriverManager.getConnection(url," "," "); //Your ID and password
     connect = true;
     conn.close();
 }catch(Exception e){
@@ -27,9 +27,9 @@ try{
 %>
 <%
 if(connect==true){%>
-    연결되었습니다.
+    Connected.
 <%}else{ %>
-    연결에 실패하였습니다.
+    Connection failed.
 <%}%> 
 </body>
 </html>
