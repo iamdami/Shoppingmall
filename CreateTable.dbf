@@ -1,0 +1,44 @@
+create table member(
+id varchar(20) primary key,
+passwd varchar(20),
+name varchar(20),
+email varchar(40),
+phone varchar(30),
+address varchar(100))
+
+
+CREATE TABLE admin (
+         admin_id varchar(20),
+         admin_passwd varchar(20),
+         PRIMARY KEY ( admin_id ));
+
+
+create table shop_product(
+no number(20) primary key,
+name varchar(20),
+price varchar(50),
+detail varchar(150),
+sdate varchar(20),
+stock varchar(50),
+image varchar(100))
+
+
+create table shop_order(
+no number(20) primary key,
+product_no varchar(20),
+quantity varchar(20),
+sdate varchar(20),
+state varchar(20),
+id varchar(20))
+
+INSERT INTO member VALUES('ldm','1234','Dami','ldm3@ggg.com','01000000001','cheonan');
+
+
+INSERT INTO member VALUES('shm','1234','Son','hmson@ggg.com','01000000007','london');
+
+
+INSERT INTO shop_product VALUES(1, 'bear_keyring','7000','cute little bears','sysdate','15','../images/bear.JPG');
+
+DELETE 
+from member
+where id= 'aaa'
